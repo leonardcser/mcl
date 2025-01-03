@@ -1,15 +1,25 @@
 {
   "name": "mcl",
   "version": "1.0.0",
-  "description": "",
+  "description": "Make Code Listing - A command-line tool that generates formatted HTML listings from source code files and directories",
   "type": "module",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "mcl": "./bin/mcl"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "code",
+    "listing",
+    "html",
+    "syntax-highlighting",
+    "documentation",
+    "source-code"
+  ],
+  "author": "Leonard Cseres",
+  "license": "MIT",
   "dependencies": {
     "highlight.js": "^11.11.1"
   }

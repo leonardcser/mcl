@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{TITLE}}</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 2rem;
+        background: white;
+        color: black;
+        font-family: monospace;
+      }
+      .file-section {
+        max-width: 900px;
+        margin: 2rem auto;
+      }
+      .file-heading {
+        padding-top: 1rem;
+        margin: 0;
+        font-size: 8pt;
+      }
+      .code-container {
+        overflow: hidden;
+      }
+      pre {
+        margin: 0;
+        padding: 0.5rem;
+      }
+      code {
+        font-family: Consolas, monospace;
+        font-size: 7pt;
+      }
+      #table-of-contents {
+        max-width: 900px;
+        margin: 0 auto 2rem auto;
+      }
+      #table-of-contents h1 {
+        margin-top: 0;
+        margin-bottom: 1.25rem;
+        font-size: 14pt;
+      }
+      #table-of-contents h2 {
+        margin-top: 0;
+        font-size: 8pt;
+      }
+      #table-of-contents a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        font-size: 7pt;
+        margin: 0;
+        margin-bottom: 0.4rem;
+      }
+
+      .hljs {
+        background: white;
+        color: black;
+      }
+
+      .hljs-comment,
+      .hljs-quote,
+      .hljs-variable {
+        color: #008000;
+      }
+
+      .hljs-keyword,
+      .hljs-selector-tag,
+      .hljs-built_in,
+      .hljs-name,
+      .hljs-tag {
+        color: #00f;
+        font-weight: bold;
+      }
+
+      .hljs-string,
+      .hljs-title,
+      .hljs-section,
+      .hljs-attribute,
+      .hljs-literal,
+      .hljs-template-tag,
+      .hljs-template-variable,
+      .hljs-type,
+      .hljs-addition {
+        color: #a31515;
+      }
+      .hljs-title {
+        font-weight: bold;
+      }
+
+      .hljs-deletion,
+      .hljs-selector-attr,
+      .hljs-selector-pseudo,
+      .hljs-meta {
+        color: #2b91af;
+      }
+
+      .hljs-doctag {
+        color: black;
+        font-weight: 600;
+      }
+
+      .hljs-attr {
+        color: #f00;
+      }
+
+      .hljs-symbol,
+      .hljs-bullet,
+      .hljs-link {
+        color: #00b0e8;
+      }
+
+      .hljs-emphasis {
+        font-style: italic;
+      }
+
+      .hljs-strong {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    {{TABLE_OF_CONTENTS}} {{CODE_SECTIONS}}
+  </body>
+</html>
