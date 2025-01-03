@@ -1,6 +1,6 @@
-# Make Code Listing (MCL)
+# Make Code Listing (mcl)
 
-Make Code Listing (MCL) is a command-line tool built with Node.js that
+Make Code Listing (mcl) is a command-line tool built with Node.js that
 transforms source code files and directories into well-formatted HTML listings.
 This tool simplifies the process of creating documentation by generating
 syntax-highlighted code listings with organized navigation.
@@ -30,12 +30,32 @@ To set up Make Code Listing on your system, follow these steps:
 npm install
 ```
 
+3. Make the script executable:
+
+```bash
+chmod +x ./bin/mcl
+```
+
+4. Create a global symlink:
+
+```bash
+npm link
+```
+
+To uninstall the global command:
+
+```bash
+npm unlink mcl
+```
+
 ## Usage
 
 Execute Make Code Listing using npm with the following syntax:
 
+5. The `mcl` command will now be available globally:
+
 ```bash
-npm start -- <input-path>
+mcl <input-path>
 ```
 
 You can use MCL in two ways:
@@ -43,13 +63,13 @@ You can use MCL in two ways:
 For a single file:
 
 ```bash
-npm start -- ./src/index.js
+mcl ./src/index.js
 ```
 
 For an entire directory:
 
 ```bash
-npm start -- ./src
+mcl ./src
 ```
 
 The tool generates an HTML file named after your input with the suffix
@@ -68,7 +88,7 @@ extensions:
 - CSS (.css)
 
 You can extend support for additional file types by modifying the configuration
-in `src/config.js`.
+in `config.js`.
 
 ## Project Structure
 
