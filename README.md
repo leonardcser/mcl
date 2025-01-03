@@ -1,27 +1,26 @@
 # Make Code Listing (mcl)
 
+> [!WARNING]
+> This tool was build for my personal use.
+
 Make Code Listing (mcl) is a command-line tool built with Node.js that
 transforms source code files and directories into well-formatted HTML listings.
 This tool simplifies the process of creating documentation by generating
 syntax-highlighted code listings with organized navigation.
 
+Highly inspired by the
+[Print VSCode extension](https://github.com/PDConSec/vsc-print).
+
+<img src="assets/self-listing.png" alt="Self listing" width="400px"/>
+
 ## Features
 
-Make Code Listing provides a comprehensive set of features for generating code
-documentation:
-
-The tool automatically generates HTML files with syntax highlighting for your
-source code. When processing directories, it creates a table of contents for
-easy navigation through multiple files. The output is responsive and optimized
-for readability across different devices.
-
-The generated HTML includes syntax highlighting for multiple programming
-languages, proper code formatting, and a clean, professional design that works
-well for documentation purposes.
+The tool automatically generates HTML files with syntax highlighting (thanks to
+[highlight.js](https://github.com/highlightjs/highlight.js)) for your source
+code. When processing directories, it creates a table of contents for easy
+navigation through multiple files.
 
 ## Installation
-
-To set up Make Code Listing on your system, follow these steps:
 
 1. Clone the repository to your local machine
 2. Install the required dependencies:
@@ -50,20 +49,18 @@ npm unlink mcl
 
 ## Usage
 
-Execute Make Code Listing using npm with the following syntax:
-
-5. The `mcl` command will now be available globally:
+The `mcl` command will now be available globally:
 
 ```bash
 mcl <input-path>
 ```
 
-You can use MCL in two ways:
+You can use `mcl` in two ways:
 
 For a single file:
 
 ```bash
-mcl ./src/index.js
+mcl index.js
 ```
 
 For an entire directory:
@@ -109,10 +106,9 @@ index.js              # Application entry point
 
 ## Customization
 
-Make Code Listing supports customization through its template system. You can
-modify the HTML templates located in the `src/templates` directory to adjust the
-output format and styling. The templates use a straightforward {{PARAMETER}}
-syntax for dynamic content insertion.
+You can modify the HTML templates located in the `src/templates` directory to
+adjust the output format and styling. The templates use a straightforward
+{{PARAMETER}} syntax for dynamic content insertion.
 
 ## License
 
