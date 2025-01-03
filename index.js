@@ -34,16 +34,16 @@ async function renderCodeToHTML(input) {
         const section = generateCodeSection(code, file, basePath);
 
         return codeSectionTemplate
-          .replace("{{FILE_PATH}}", section.path)
-          .replace("{{EXTENSION}}", section.extension)
-          .replace("{{CODE}}", section.highlighted);
+          .replace(/{{FILE_PATH}}/g, section.path)
+          .replace(/{{EXTENSION}}/g, section.extension)
+          .replace(/{{CODE}}/g, section.highlighted);
       }),
     );
 
     // Generate table of contents if needed
     const toc = isDir
       ? tocTemplate
-          .replace("{{FOLDER_NAME}}", parse(input).name)
+          .replace(/{{FOLDER_NAME}}/g, parse(input).name)
           .replace("{{FILE_COUNT}}", codeFiles.length.toString())
           .replace(
             "{{TOC_LINKS}}",
